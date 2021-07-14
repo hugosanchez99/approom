@@ -1,32 +1,17 @@
 <template>
+
+  <!-- Aplicacion para ordenar una habitacion, solo responsivo en movil, no ordenador -->
+
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="fixed h-16 w-full bg-white z-10 bottom-0 ">
+      <div class="container group bg-white focus:bg-yellow-600 mx-auto text-lg flex justify-between items-center">
+        <router-link class="group focus:bg-gray-600 focus:text-white p-4 text-3xl" to="/"><i class='bx bx-home' ></i></router-link>
+        <router-link class="group focus:bg-gray-600 focus:text-white p-4 text-3xl" to="/likes"><i class='bx bx-heart' ></i></router-link>
+        <router-link class="group focus:bg-gray-600 focus:text-white p-4 text-3xl" to="/map"><i class='bx bx-map' ></i></router-link>
+        <router-link class="group focus:bg-gray-600 focus:text-white p-4 text-3xl" to="/message"><i class='bx bx-message-detail' ></i></router-link>
+      </div>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
