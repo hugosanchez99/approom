@@ -14,7 +14,7 @@
             Tapijulapa, Tabasco
           </h2>
 
-          <h2 class="text-3xl text-gray-800 font-semibold">Fiesta Inn</h2>
+          <h2 class="text-3xl text-gray-800 font-semibold">Holiday Inn</h2>
 
           <div class="flex justify-between items-center text-2xl px-4 text-gray-800 my-2">
             <span><i class="bx bxs-bed"></i> 2</span>
