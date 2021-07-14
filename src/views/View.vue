@@ -11,7 +11,7 @@
       <div class="container p-4 mx-auto bg-white rounded-lg">
           <h2 class="text-lg text-gray-400 font-semibold">
             <i class="bx bx-been-here"></i>
-            Palenque, Chiapas
+            Tapijulapa, Tabasco
           </h2>
 
           <h2 class="text-3xl text-gray-800 font-semibold">Fiesta Inn</h2>
@@ -31,7 +31,7 @@
         </div>
 
         <div class="p-4">
-        <router-link class="group focus:bg-gray-600 focus:text-white p-4 text-3xl" to="/info">
+        <router-link class="group focus:bg-gray-600 focus:text-white p-4 text-3xl" to="/view/info">
           <i class='bx bx-info-circle'></i>
         </router-link>
         <router-view></router-view>

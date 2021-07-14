@@ -2,7 +2,7 @@
     <div class="container mx-auto mt-6 mb-16">
         <div class="p-4 rounded-lg ">
             <figure class="h-52 w-full rounded-lg  relative">
-                <span class="text-sm text-gray-600 font-semibold p-2 m-4 rounded bg-white opacity-75 absolute">Palenque Chiapas</span>
+                <span class="text-sm text-gray-600 font-semibold p-2 m-4 rounded bg-white opacity-75 absolute">Tapijulapa, Tabasco</span>
 
             <div class="absolute -bottom-12 justify-center bg-gray-100 w-full rounded-lg">
                 <h2 class="text-gray-800 font-bold text-center block text-2xl pt-2"> {{title}} </h2>
