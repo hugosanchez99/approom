@@ -1,6 +1,5 @@
 <template>
     <div class="container mx-auto mt-6 mb-16">
-
         <div class="p-4 rounded-lg ">
             <figure class="h-52 w-full rounded-lg  relative">
                 <span class="text-sm text-gray-600 font-semibold p-2 m-4 rounded bg-white opacity-75 absolute">Palenque Chiapas</span>

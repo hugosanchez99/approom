@@ -2,21 +2,6 @@
   <div class="home">
     <div class="container mx-auto">
 
-      <div class="flex items-center justify-between p-4">
-        <figure class="h-12 w-12 rounded-full overflow-hidden">
-          <img class="object-cover object-center" src="https://images.unsplash.com/photo-1520155707862-5b32817388d6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHByb2ZpbGV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
-        </figure>
-
-        <div class="">
-          <h2 class="text-lg text-gray-500 font-semibold">Chiapas, Mexico</h2>
-        </div>
-
-        <a class="">
-          <i class='bx bx-cog text-2xl' ></i>
-        </a>
-
-      </div>
-
       <div class="text-center">
         <p class="text-gray-500 text-lg font-bold">Hola Hugo</p>
         <p class="text-gray-800 font-semibold text-xl">Comienza a buscar un lugar</p>
@@ -36,7 +21,9 @@
 
     </div>
 
+    <router-link to="/view">
     <CardApp
+      @click="redirigir"
       imgUser="https://images.unsplash.com/photo-1509967419530-da38b4704bc6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGZhY2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
       imgCard="https://images.unsplash.com/photo-1554995207-c18c203602cb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cm9vbXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
       userName="Anne Gateway"
@@ -46,6 +33,8 @@
       v-for="item in 10"
       :key="item"
     />
+    </router-link>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -58,5 +47,10 @@ export default {
   components: {
     CardApp,
   },
+  methods: {
+    redirigir(){
+      this.$router.push('/view');
+    }
+  }
 };
 </script>
