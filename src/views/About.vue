@@ -6,13 +6,13 @@
 
     <p class="text-gray-800 text-xl mt-4">
       <span class="font-semibold">Rest-Room</span> es una aplicacion donde
-      podras buscar una hbaitacion de tu preferencia en Tabasco, en la
+      podras buscar una habitacion de tu preferencia en Tabasco, en la
       aplicación buscaras la informacion necesaria para poder escoger entre una
       habitación y otra.
     </p>
 
     <div class="flex items-center justify-center">
-      <button class="py-2 px-4 my-6 bg-blue-500 rounded-lg hover:bg-blue-800">
+      <button class="py-2 px-4 my-6 bg-blue-500 rounded-lg active:bg-blue-800 text-white">
         <router-link to="/"> comenzar a buscar </router-link>
       </button>
     </div>

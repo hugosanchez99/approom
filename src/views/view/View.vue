@@ -31,14 +31,14 @@
         </div>
 
         <div class="p-4">
-        <router-link class="group focus:bg-gray-600 focus:text-white p-4 text-3xl" to="/view/info">
+        <router-link class="group focus:bg-gray-600 focus:text-white p-4 text-3xl" to="/info">
           <i class='bx bx-info-circle'></i>
         </router-link>
         <router-view></router-view>
         </div>
         
         <div class="p-4 flex flex-col">
-            <label class="text-gray-800 text-lg font-semibold" for="fecha">Fecha</label>
+            <label class="text-gray-800 text-lg font-semibold text-white py-2 px-4 w-full" for="fecha">Fecha</label>
             <input class="text-lg" type="date" name="fecha">
         </div>
     </div>
