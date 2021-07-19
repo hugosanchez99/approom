@@ -1,5 +1,5 @@
 <template>
-  <div>
+    <div>
     <div class="mb-24">
       <figure class="w-full h-72">
         <img
@@ -47,24 +47,32 @@
             quis aspernatur praesentium veritatis quos natus iure unde dicta?
           </p>
         </div>
-        <div class="px-4 flex flex-col">
-          <label
-            class="text-gray-800 text-lg font-semibold text-white py-2 w-full"
-            for="fecha"
-            >Fecha</label
-          >
-          <input class="text-lg" type="date" name="fecha" />
-          <div class="p-4">
-            <Button>Reservar ahora</Button>
-          </div>
+      </div>
+
+      <div class="px-4 flex flex-col">
+        <label
+          class="
+            text-gray-800 text-lg
+            font-semibold
+            text-white
+            py-2
+            px-4
+            w-full
+          "
+          for="fecha"
+          >Fecha</label
+        >
+        <input class="text-lg" type="date" name="fecha" />
+        <div class="p-4">
+          <Button>Reservar ahora</Button>
         </div>
       </div>
     </div>
-  </div>
+    </div>
 </template>
 
 <script>
 export default {
-  name: "Card",
-};
+    name: 'Card'
+}
 </script>

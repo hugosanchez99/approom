@@ -5,9 +5,9 @@
   <div id="app">
     <!-- Nav -->
     <div class="flex items-center justify-between p-4">
-        <figure class="h-12 w-12 rounded-full overflow-hidden">
+        <figure class="h-12 w-12 rounded-full ">
           <router-link to="/profile">
-            <img class="object-cover object-center" src="https://images.unsplash.com/photo-1520155707862-5b32817388d6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHByb2ZpbGV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+            <img class="object-cover object-center" src="@/assets/logo.png" alt="">
           </router-link>
         </figure>
 
@@ -15,9 +15,6 @@
           <h2 class="text-lg text-gray-500 font-semibold">Tabasco, México</h2>
         </div>
 
-        <a class="">
-          <i class='bx bx-cog text-2xl' ></i>
-        </a>
     </div>
 
     <!-- Footer -->

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-// import firebase from '../firebase'
+import firebase from '@/firebase'
 
 Vue.use(VueRouter)
 
@@ -10,44 +10,38 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
-    // meta: { requiresAuth: true }
+    meta: { requiresAuth: true }
   },
   {
     path: '/about',
     name: 'About',
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
-    // meta: { requiresAuth: true }
+    meta: { requiresAuth: true }
   },
   {
     path: '/login',
     name: 'Login',
     component: () => import(/* webpackChunkName: "about" */ '../views/Login.vue'),
-    // meta: { requiresAuth: false }
+    meta: { requiresAuth: false }
   },
   {
-    path: '/view',
+    path: '/view/:id',
     name: 'View',
     component: () => import('../views/view/View.vue'),
-    // meta: { requiresAuth: true }
+    meta: { requiresAuth: true }
   },
-  {
-    path: '/view/info',
-    name: 'Info',
-    component: () => import('../views/view/Info.vue'),
-    // meta: { requiresAuth: true }
-
-  },
+  
   {
     path: '/places',
     name: 'Place',
-    component: () => import('../views/downbar/Create.vue'),
-    // meta: { requiresAuth: true }
+    component: () => import('../views/downbar/Places.vue'),
+    meta: { requiresAuth: true }
   },
   {
     path: '/profile',
     name: 'Profile',
     component: () => import('../views/downbar/Profile.vue'),
-    // meta: { requiresAuth: true }
+    meta: { requiresAuth: true }
 
   }
 ]
@@ -58,27 +52,27 @@ const router = new VueRouter({
   routes
 })
 
-// router.beforeEach((to, from, next) => {
-//   const rutaApp = to.matched.some(record => record.meta.requiresAuth)
+router.beforeEach((to, from, next) => {
+  const rutaApp = to.matched.some(record => record.meta.requiresAuth)
 
-//   if (rutaApp) {
-//     firebase.auth().onAuthStateChanged(user => {
-//       if (user) {
-//         next()
-//       } else {
-//         next({ name: 'Login' })
-//       }
-//     })
-//   } else {
-//     firebase.auth().onAuthStateChanged(user => {
-//       if (user) {
-//         next({ name: 'Home' })
-//       } else {
-//         next()
-//       }
-//     })
-//   }
+  if (rutaApp) {
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        next()
+      } else {
+        next({ name: 'Login' })
+      }
+    })
+  } else {
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        next({ name: 'Home' })
+      } else {
+        next()
+      }
+    })
+  }
 
-// })
+})
 
 export default router

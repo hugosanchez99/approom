@@ -13,6 +13,7 @@
 <script>
 import Button from "@/components/Button.vue";
 import firebase from "firebase/app";
+
 export default {
   components: {
     Button,
@@ -21,7 +22,7 @@ export default {
       async login(){
          try{
               let provider = new firebase.auth.GoogleAuthProvider();
-          await firebase.auth().signInWithPupup(provider)
+          await firebase.auth().signInWithPopup(provider)
          }catch(e){
              console.log(e)
          }

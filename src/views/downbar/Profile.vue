@@ -9,15 +9,17 @@
 
       <h2 class="text-2xl font-semibold my-4">Hugo Francisco</h2>
 
-      <form action="#">
-          <a class="py-2 px-4 bg-red-500 rounded-full text-white font-semibold mt-4 active:bg-red-800">
-              Cerrar sesión
+        <router-link to="/login">
+          <a class="py-2 px-4 bg-green-500 rounded-full text-white font-semibold mt-4 active:bg-red-800">
+              Iniciar Sesión
           </a>
-      </form>
+        </router-link>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  
+};
 </script>

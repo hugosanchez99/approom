@@ -1,43 +1,18 @@
-import firebase from 'firebase'
-import { ref, onUnmounted } from 'vue';
+import firebase from 'firebase/app'
+import 'firebase/auth'
 
 var config = {
-    apiKey: "AIzaSyCVXiN-YW1HadCNDOEGu4s9nqNP1Jb1u30",
-    authDomain: "rent-room-5c80f.firebaseapp.com",
-    databaseURL: "https://rent-room-5c80f-default-rtdb.firebaseio.com",
-    projectId: "rent-room-5c80f",
-    storageBucket: "rent-room-5c80f.appspot.com",
-    messagingSenderId: "302419163816",
-    appId: "1:302419163816:web:23d54ada32c8f8579f209d"
+  apiKey: "AIzaSyCYL6_LfYB4hez6NaqTob1td_lFeMXs8pM",
+  authDomain: "rentroom-4e002.firebaseapp.com",
+  projectId: "rentroom-4e002",
+  storageBucket: "rentroom-4e002.appspot.com",
+  messagingSenderId: "524827723909",
+  appId: "1:524827723909:web:c851985ebc874b451581ec",
+  measurementId: "G-EV0WVB1L5Z"
 };
 
-const firebaseApp = firebase.initializeApp(config)
+firebase.initializeApp(config)
 
-const db = firebase.firestore()
-const usersCollection = db.collection('user')
+export default firebase;
 
-export const createUser = user => {
-    return usersCollection.add(user)
-}
-
-export const getUser = async id => {
-    const user = await usersCollection.doc(id).get()
-    return user.exists ? user.data() : null
-}
-
-export const updateUser = (id, user) => {
-    return usersCollection.doc(id).update(user)
-}
-
-export const deleteUser = id => {
-    return usersCollection.doc(id).delete()
-}
-
-export const useLoadUsers = () => {
-    const users = ref([])
-    usersCollection.onSnapshot(snapshot => {
-        users.value = snapshot.docs.map(doc => ({id: doc.id, ...doc.data()}))
-    })
-    onUnmounted(close)
-    return users;
-}
+export const auth = firebase.auth()
