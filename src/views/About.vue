@@ -1,5 +1,5 @@
 <template>
-  <div class="container p-4">
+  <div class="container p-4 mx-auto">
     <h1 class="text-3xl text-gray-900 font-semibold text-center">
       Bienvenidos a <span class="block font-bold">Rest-Room</span>
     </h1>

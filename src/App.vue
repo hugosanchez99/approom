@@ -25,7 +25,7 @@
       <div class="container group bg-white focus:bg-yellow-600 mx-auto text-lg flex justify-between items-center">
         <router-link class="group focus:bg-gray-600 focus:text-white p-4 text-3xl" to="/"><i class='bx bx-home' ></i></router-link>
         <router-link class="group focus:bg-gray-600 focus:text-white p-4 text-3xl" to="/about"><i class='bx bx-help-circle'></i></router-link>
-        <router-link class="group focus:bg-gray-600 focus:text-white p-4 text-3xl" to="/create"><i class='bx bx-door-open' ></i></router-link>
+        <router-link class="group focus:bg-gray-600 focus:text-white p-4 text-3xl" to="/places"><i class='bx bx-door-open' ></i></router-link>
         <router-link class="group focus:bg-gray-600 focus:text-white p-4 text-3xl" to="/profile"><i class='bx bx-user' ></i></router-link>
       </div>
     </div>

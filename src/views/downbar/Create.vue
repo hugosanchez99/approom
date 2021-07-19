@@ -1,27 +1,85 @@
 <template>
-    <div class="container p-4 mb-10">
-        <h1 class="text-2xl text-center text-gray-800 font-semibold">Ingresar un nuevo Hotel</h1>
+  <div class="container p-4 mb-10 mx-auto">
+    <h1 class="text-2xl text-center text-gray-800 font-semibold">
+      Actractivos cercanos
+    </h1>
 
-        <form class="w-full mt-4">
-            <input class="w-full border-2 border-gray-300 px-4 py-2 rounded-full mb-2 outline-none" type="text" placeholder="Ingrese el nombre del hotel">
-            <input class="w-full border-2 border-gray-300 px-4 py-2 rounded-full mb-2 outline-none" type="text" placeholder="Ingrese el nombre del propetario">
-            <input class="w-full border-2 border-gray-300 px-4 py-2 rounded-full mb-2 outline-none" type="number" placeholder="Precio por noche">
-            <input class="w-full border-2 border-gray-300 px-4 py-2 rounded-full mb-2 outline-none" type="number" placeholder="Cantidad de estrellas">
-            <input class="w-full border-2 border-gray-300 px-4 py-2 rounded-full mb-2 outline-none" type="text" placeholder="Ingrese imagen foto del hotel">
-            <input class="w-full border-2 border-gray-300 px-4 py-2 rounded-full mb-2 outline-none" type="text" placeholder="Ingrese imagen de perfil propetario">
-            <textarea class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg mb-2 outline-none" placeholder="Ingrese una descripción breve del hotel" name="Descripcion" rows="10"></textarea>
+    <div class="grid grid-cols-1 md:grid-cols-3 md:gap-4">
+      <div
+        v-for="image in images"
+        :key="image.id"
+        class="p-4 bg-gray-100 rounded-lg shadow-lg my-4"
+      >
+        <h2 class="text-2xl text-center font-semibold mb-4">
+          {{ image.name }}
+        </h2>
+        <figure class="h-36 w-full">
+          <img
+            clasS="h-full w-full object-cover object-center rounded-lg"
+            :src="image.url"
+            alt=""
+          />
+        </figure>
 
-            <button class="py-2 px-4 w-full rounded-lg bg-blue-500 mb-4 text-white text-xl font-semibold active:bg-blue-800">
-                Ingresar
-            </button>
+        <h2 class="p-2 text-center bg-red-800 text-white rounded-full my-4">
+          Categoría: {{ image.category }}
+        </h2>
 
-        </form>
-
+        <p>{{ image.text }}</p>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
 export default {
-    
-}
+  data: function () {
+    return {
+      images: [
+        {
+          id: 1,
+          url: require("@/assets/tapi.jpg"),
+          name: "Tapijulapa, Tabasco",
+          category: "Pueblo Magico",
+          text: "Declarado como pueblo magico, es un hermoso pueblito enclabado en la sierra tabsqueña.",
+        },
+        {
+          id: 2,
+          url: require("@/assets/comal.jpg"),
+          name: "Comalcalco, Tabasco",
+          category: "Zona Arqueologica",
+          text: "Una zona hecha de barro, da un aspecto diferente a otras ciudades Mayas, asombrate con su grandeza.",
+        },
+        {
+          id: 3,
+          url: require("@/assets/ceiba.jpg"),
+          name: "Puerto Ceiba, Tabasco",
+          category: "Playa",
+          text: "De las playas virgenes mas hermosas del estado, este hermoso pueblo te maravillara con sus playas y zona de restaurantes.",
+        },
+        {
+          id: 4,
+          url: require("@/assets/jalpa.jpeg"),
+          name: "Jalpa de Mendez, Tabasco",
+          category: "Ciudad Maya",
+          text: "Enclavada en la zona indigana maya-yokotan del estado de tabasco, guarda la cultura y tradicion del estado de tabasco, aun sus habitantes hablan maya",
+        },
+        {
+          id: 5,
+          url: require("@/assets/teno.jpg"),
+          name: "Tenosique, Tabasco",
+          category: "Ciudad Maya",
+          text: "Tenosique tiene los paisajes mas hermosos del estado, soo con dar un paseo en el cañon del Usumacinta quedaras maravillados, no te olvides de concer sus zonas arquelogicas llenas de magia.",
+        },
+        {
+          id: 6,
+          url: require("@/assets/bala.jpeg"),
+          name: "Balancan, Tabasco",
+          category: "Ciudad Maya",
+          text: "Enclavada en la zona Maya de Tabasco, el pueblo y zona maya te dejaran asombrados, el rio San Pedro guarda mucho misterios en sus ciudades.",
+        },
+      ],
+    };
+  },
+};
 </script>
