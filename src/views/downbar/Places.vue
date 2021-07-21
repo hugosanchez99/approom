@@ -4,7 +4,7 @@
       Actractivos cercanos
     </h1>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 md:gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 md:gap-10">
       <div
         v-for="image in images"
         :key="image.id"

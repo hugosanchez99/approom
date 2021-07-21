@@ -6,13 +6,13 @@
     <!-- Nav -->
     <div class="flex items-center justify-between p-4">
         <figure class="h-12 w-12 rounded-full ">
-          <router-link to="/profile">
+          <router-link to="/">
             <img class="object-cover object-center" src="@/assets/logo.png" alt="">
           </router-link>
         </figure>
 
         <div class="">
-          <h2 class="text-lg text-gray-500 font-semibold">Tabasco, México</h2>
+          <h2 class="text-lg text-gray-500 font-semibold hover:text-gray-100 duration-300">Tabasco, México</h2>
         </div>
 
     </div>
