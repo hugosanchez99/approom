@@ -11,7 +11,7 @@
         />
       </figure>
 
-      <h2 class="text-2xl font-semibold my-4">Hugo Francisco</h2>
+      <h2 class="text-2xl font-semibold my-4 text-gray-900">Rent-Room</h2>
 
 
       <a @click="logout" class="py-2 px-4 bg-red-500 rounded-full text-white font-semibold mt-4 cursor-pointer active:bg-red-800">

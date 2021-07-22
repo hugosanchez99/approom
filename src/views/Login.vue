@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container p-4">
+    <div class="container p-4 mx-auto">
       <h2 class="text-center font-bold my-4">Inicia sesión</h2>
       <div class="flex items-center w-full text-white relative">
         <Button @click="login" class="w-full pl-2">Login with Google</Button>

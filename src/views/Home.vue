@@ -8,28 +8,6 @@
         </p>
       </div>
 
-      <div class="px-4 pt-4 w-full">
-        <input
-          class="
-            w-full
-            rounded-full
-            px-2
-            focus:outline-none
-            focus:ring
-            focus:border-blue-300
-            text-gray-500
-            relative
-          "
-          type="text"
-          name="buscar"
-          placeholder="Buscar departamento"
-          autocomplete="off"
-        />
-        <i
-          class="bx bx-search-alt text-gray-400 font-bold absolute right-8 pt-1"
-        ></i>
-      </div>
-
       <div
         class="px-4 pt-4 h-24 flex items-center justify-between items-center"
       >

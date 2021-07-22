@@ -25,18 +25,12 @@ const routes = [
     meta: { requiresAuth: false }
   },
   {
-    path: '/view/:id',
-    name: 'View',
-    component: () => import('../views/view/View.vue'),
-    meta: { requiresAuth: true }
-  },
-  
-  {
     path: '/places',
     name: 'Place',
     component: () => import('../views/downbar/Places.vue'),
     meta: { requiresAuth: true }
   },
+  
   {
     path: '/profile',
     name: 'Profile',
