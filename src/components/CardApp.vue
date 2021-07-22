@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <div class="mt-4">
+  <div >
+    
+    <div class="container mx-4">
+      <div class="mt-4 ">
       <button  @click="form = true" class="py-2 px-3 bg-blue-500 rounded-lg text-white font-semibold">
         Crear nuevo
       </button>
@@ -59,6 +61,8 @@
         </div>
       </div>
     </div>
+    </div>
+
     <div
       class="
         container
