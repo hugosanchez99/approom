@@ -1,22 +1,62 @@
 <template>
   <div>
-    <div class="container mx-auto mb-16">
+    <div class="mt-4">
+      <button  @click="form = true" class="py-2 px-3 bg-blue-500 rounded-lg text-white font-semibold">
+        Crear nuevo
+      </button>
+       <button  @click="form = false" class="py-2 px-4 ml-2 bg-red-500 rounded-lg text-white font-semibold">
+        Cerrar
+      </button>
+    </div>
+    <div v-if="form" class="container mx-auto mb-16">
       <h1 class="text-center font-semibold text-2xl">Crear nuevo componente</h1>
 
       <div class="my-4">
-        <input v-model="title" type="text" class="w-full p-2 rounded-full outline-none bg-gray-100 mt-4" placeholder="Ingrese el nombre del hotel"/>
-        <input v-model="userName" type="text" class="w-full p-2 rounded-full outline-none bg-gray-100 mt-4" placeholder="Ingrese el nombre del dueño"/>
-        <input v-model="imgCard" type="text" class="w-full p-2 rounded-full outline-none bg-gray-100 mt-4" placeholder="Ingrese url fotografia"/>
-        <input v-model="star" type="text" class="w-full p-2 rounded-full outline-none bg-gray-100 mt-4" placeholder="Ingrese numero de estrellas"/>
-        <input v-model="place" type="text" class="w-full p-2 rounded-full outline-none bg-gray-100 mt-4" placeholder="Ingrese el lugar"/>
-        <input v-model="price" type="text" class="w-full p-2 rounded-full outline-none bg-gray-100 mt-4" placeholder="Ingrese el precio"/>
+        <input
+          v-model="title"
+          type="text"
+          class="w-full p-2 rounded-full outline-none bg-gray-100 mt-4"
+          placeholder="Ingrese el nombre del hotel"
+        />
+        <input
+          v-model="userName"
+          type="text"
+          class="w-full p-2 rounded-full outline-none bg-gray-100 mt-4"
+          placeholder="Ingrese el nombre del dueño"
+        />
+        <input
+          v-model="imgCard"
+          type="text"
+          class="w-full p-2 rounded-full outline-none bg-gray-100 mt-4"
+          placeholder="Ingrese url fotografia"
+        />
+        <input
+          v-model="star"
+          type="text"
+          class="w-full p-2 rounded-full outline-none bg-gray-100 mt-4"
+          placeholder="Ingrese numero de estrellas"
+        />
+        <input
+          v-model="place"
+          type="text"
+          class="w-full p-2 rounded-full outline-none bg-gray-100 mt-4"
+          placeholder="Ingrese el lugar"
+        />
+        <input
+          v-model="price"
+          type="text"
+          class="w-full p-2 rounded-full outline-none bg-gray-100 mt-4"
+          placeholder="Ingrese el precio"
+        />
 
         <div class="flex items-center justify-center">
-            <button @click="agregar" class="bg-green-800 text-white font-bold px-4 py-2 rounded mt-4 ">
-                Ingresar
-            </button>
+          <button
+            @click="agregar"
+            class="bg-green-800 text-white font-bold px-4 py-2 rounded mt-4"
+          >
+            Ingresar
+          </button>
         </div>
-
       </div>
     </div>
     <div
@@ -34,10 +74,11 @@
       <div
         v-for="hotel in hotels"
         :key="hotel.id"
-        class="p-4 rounded-lg mb-10"
-        v-on:click="info(hotel.id)"
+        class="p-4 rounded-lg mb-10 "
       >
+      
         <figure class="h-52 w-full rounded-lg relative">
+        
           <span
             class="
               text-sm text-gray-600
@@ -100,10 +141,9 @@
             alt=""
           />
         </figure>
-
       </div>
 
-          <div
+      <div
         v-for="hotel in hoteles"
         :key="hotel.id"
         class="p-4 rounded-lg mb-10"
@@ -172,9 +212,7 @@
             alt=""
           />
         </figure>
-
       </div>
-
     </div>
   </div>
 </template>
@@ -189,8 +227,7 @@ export default {
     },
     imgCard: {
       type: String,
-      default:
-        "",
+      default: "",
     },
     price: {
       type: String,
@@ -240,42 +277,47 @@ export default {
           place: "Villahermosa",
         },
       ],
+      form: false,
     };
   },
   methods: {
     info(id) {
       this.$router.push("/view/" + id);
     },
-     agregar(){
-            this.hotels.push({
-            title : this.title,
-            owner: this.owner,
-            imgCard : this.imgCard,
-            star: this.star,
-            place: this.place,
-            price: this.price,
-            extract: this.extract
-            });
+    agregar() {
+      this.hotels.push({
+        title: this.title,
+        owner: this.owner,
+        imgCard: this.imgCard,
+        star: this.star,
+        place: this.place,
+        price: this.price,
+        extract: this.extract,
+      });
 
-            this.title = '',
-            this.owner= '',
-            this.imgCard= '',
-            this.star= '',
-            this.place= '',
-            this.price= '',
-            this.extract= ''
+      (this.title = ""),
+        (this.owner = ""),
+        (this.imgCard = ""),
+        (this.star = ""),
+        (this.place = ""),
+        (this.price = ""),
+        (this.extract = "");
 
-            localStorage.setItem('gym-vue', JSON.stringify(this.hotels)); 
-        }
+      localStorage.setItem("gym-vue", JSON.stringify(this.hotels));
+    },
+    mostrar(){
+      var ch = document.getElementById('#form');
+      ch.style.display = "block";
+    },
+   
   },
-  created: function(){
-    let datosDB = JSON.parse(localStorage.getItem('gym-vue'));
+  created: function () {
+    let datosDB = JSON.parse(localStorage.getItem("gym-vue"));
     if (datosDB === null) {
-      this.hotels = [];      
-    }else{
+      this.hotels = [];
+    } else {
       this.hotels = datosDB;
     }
-  }
- 
+  },
 };
 </script>
